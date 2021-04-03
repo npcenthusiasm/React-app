@@ -1,19 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import CommentDetail from './CommentDetail'
+import faker from 'faker'
+import ApprovalCard from './ApprovalCard'
 
-const getButtonText = () => {
-  return 'CLICK BUTTON !'
-}
 const App = () => {
-  const buttonText = 'Click button!'
   return (
-  <div>
-    <label className='blank' htmlFor='inputA'>input name: </label>
-    <input type="text" id='inputA'></input>
-    <button style={{backgroundColor: 'blue', color: 'white'}}>
-      { getButtonText() }
-    </button>
-  </div>
+    <div className='ui container comments'>
+      <ApprovalCard >
+        <CommentDetail author='Sam' timeAgo='Today ad 6:00 PM' content='Nice blog post!' avatar={faker.image.avatar()}/>
+      </ApprovalCard>
+      <CommentDetail author='Sam' timeAgo='Today ad 6:00 PM' content='Nice blog post!' avatar={faker.image.avatar()}/>
+      <CommentDetail author='Sam' timeAgo='Today ad 6:00 PM' content='Nice blog post!' avatar={faker.image.avatar()}/>
+      <CommentDetail author='Sam' timeAgo='Today ad 6:00 PM' content='Nice blog post!' avatar={faker.image.avatar()}/>
+    </div>
   )
 }
 
